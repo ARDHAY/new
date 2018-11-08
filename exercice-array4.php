@@ -18,25 +18,22 @@
     $carte = array(1 => "asso", 2 => "2", 3 => "3", 4 => "4", 5 => "5", 6 => "6", 7 => "7",
         8 => "8", 9 => "9", 10 => "10", 11 => "fante", 12 => "cavallo", 13 => "re",);
 
+
     foreach ($carte as $i => $val) {
         ?>
         <tr>
-        <td><?php echo $val ?></td>
-        <td>
-        <table>
-        <tr>
-        <?php
-        foreach ($carte as $i => $val) {
-            ?>
-            <td> <?php $i ?></td>
-           <!-- <td><img src="scopa/asso.jpg" alt="asoo" width="30" height="60"></td>-->
-            </tr>
-            </table>
+            <td><?php echo $val ?></td>
+            <td>
+                    <table>
+                    <tr><td> <?php $i ?></td>
+                       <!-- <td><img src="scopa/asso.jpg" alt="asoo" width="30" height="60"></td>-->
+                    </tr>
+                    </table>
             </td>
-            </tr>
+        </tr>
 
             <?php
-        }
+
     }
     ?>
 </table>
