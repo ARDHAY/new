@@ -1,41 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="">
-</head>
-<body>
-<table border="1" class="alert-danger">
-    <tr>
-        <th>cle</th>
-        <th>valeur</th>
-    </tr>
+<?php
 
-    <?php
-    $carte = array(1 => "asso", 2 => "2", 3 => "3", 4 => "4", 5 => "5", 6 => "6", 7 => "7",
-        8 => "8", 9 => "9", 10 => "10", 11 => "fante", 12 => "cavallo", 13 => "re",);
+$tableauDeCartes=array( 1=>([ 1=>'<img src="scopa/asso.jpg" alt="">']),
+    2 => ([ 2=>'<img src="scopa/2.jpg" alt="">']),
+    3=>([3=>'<img src="scopa/3.jpg" alt=""></a>']),
+    4=>([4=>'<img src="scopa/4.jpg" alt="">']),
+    5=>([5=>'<img src="scopa/5.jpg" alt="">']),
+    6=>([6=>'<img src="scopa/6.jpg" alt="">']),
+    7=>([7=>'<img src="scopa/7.jpg" alt="">']),
+    8=>([8=>'<img src="scopa/8.jpg" alt="">']),
+    9=>([9=>'<img src="scopa/9.jpg" alt="">',]),
+    10=>([ 10=>'<img src="scopa/10.jpg" alt="">',]),
+    11=>([11=>'<img src="scopa/11.jpg" alt="">',]),
+    12=>([12=>'<img src="scopa/12.jpg" alt="">',]));
 
 
-    foreach ($carte as $i => $val) {
-        ?>
-        <tr>
-            <td><?php echo $val ?></td>
-            <td>
-                    <table>
-                    <tr><td> <?php $i ?></td>
-                       <!-- <td><img src="scopa/asso.jpg" alt="asoo" width="30" height="60"></td>-->
-                    </tr>
-                    </table>
-            </td>
-        </tr>
+$scorej1=0;
+$scorej2=0;
 
-            <?php
+for($i=1;$i<=5;$i++){
+    $joueur1[]=( array_rand($tableauDeCartes));
+    //  print_r( $joueur1);
+    echo'<br>';}
+for($i=1;$i<=5;$i++){
+    $joueur2[]=( array_rand($tableauDeCartes));
+//print_r( $joueur2);
+    echo'<br>';}
+for($i=0;$i<5;$i++){
+    if ($joueur1[$i]>$joueur2[$i]){
+        $scorej1++;}
+    echo $scorej1.'<br>';}
+foreach ($tableauDeCartes as $key=>$val){
+    foreach ($val as $k1=>$v1){
+        foreach ($joueur1 as $k=>$v){
+            if($k1==$v){
+                print_r($v1);
 
-    }
-    ?>
-</table>
-</body>
-</html>
+            }
+        }
+    }}
+echo'<br>';
+for($i=0;$i<5;$i++){
+    if ($joueur1[$i]<$joueur2[$i]){
+        $scorej2++;}
+    echo $scorej2.'<br>';}
+foreach ($tableauDeCartes as $key=>$val){
+    foreach ($val as $k1=>$v1){
+        foreach ($joueur2 as $k=>$v){
+            if($k1==$v){
+                print_r($v1);
+
+            }
+        }
+    }}
+
