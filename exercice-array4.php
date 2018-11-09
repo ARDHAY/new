@@ -1,55 +1,44 @@
 <?php
+$cart = array(1 => array("asso" => '<img src="scopa/asso.jpg" /> '), 2 => array("due " => '<img src="scopa/2.jpg" />'), 3 => array("tre " => '<img src="scopa/3.jpg" />'),
+    4 => array("quatro " => '<img src="scopa/4.jpg" />'), 5 => array("cinque" => '<img src="scopa/5.jpg" />'), 6 => array("sei " => '<img src="scopa/6.jpg" />'),
+    7 => array("sette " => '<img src="scopa/7.jpg"/>'), 8 => array("otto" => '<img src="scopa/8.jpg" />'), 9 => array("nove " => '<img src="scopa/9.jpg" />'),
+    10 => array("effe " => '<img src="scopa/10.jpg" />',),11=>array("cavallo " => '<img src="scopa/11.jpg" />'),12=> array("Re " => '<img src="scopa/12.jpg" />',));
 
-$tableauDeCartes=array( 1=>([ 1=>'<img src="scopa/asso.jpg" alt="">']),
-    2 => ([ 2=>'<img src="scopa/2.jpg" alt="">']),
-    3=>([3=>'<img src="scopa/3.jpg" alt=""></a>']),
-    4=>([4=>'<img src="scopa/4.jpg" alt="">']),
-    5=>([5=>'<img src="scopa/5.jpg" alt="">']),
-    6=>([6=>'<img src="scopa/6.jpg" alt="">']),
-    7=>([7=>'<img src="scopa/7.jpg" alt="">']),
-    8=>([8=>'<img src="scopa/8.jpg" alt="">']),
-    9=>([9=>'<img src="scopa/9.jpg" alt="">',]),
-    10=>([ 10=>'<img src="scopa/10.jpg" alt="">',]),
-    11=>([11=>'<img src="scopa/11.jpg" alt="">',]),
-    12=>([12=>'<img src="scopa/12.jpg" alt="">',]));
-
-
-$scorej1=0;
-$scorej2=0;
-
-for($i=1;$i<=5;$i++){
-    $joueur1[]=( array_rand($tableauDeCartes));
-    //  print_r( $joueur1);
-    echo'<br>';}
-for($i=1;$i<=5;$i++){
-    $joueur2[]=( array_rand($tableauDeCartes));
-//print_r( $joueur2);
-    echo'<br>';}
-for($i=0;$i<5;$i++){
-    if ($joueur1[$i]>$joueur2[$i]){
-        $scorej1++;}
-    echo $scorej1.'<br>';}
-foreach ($tableauDeCartes as $key=>$val){
-    foreach ($val as $k1=>$v1){
-        foreach ($joueur1 as $k=>$v){
-            if($k1==$v){
-                print_r($v1);
-
-            }
-        }
-    }}
-echo'<br>';
-for($i=0;$i<5;$i++){
-    if ($joueur1[$i]<$joueur2[$i]){
-        $scorej2++;}
-    echo $scorej2.'<br>';}
-foreach ($tableauDeCartes as $key=>$val){
-    foreach ($val as $k1=>$v1){
-        foreach ($joueur2 as $k=>$v){
-            if($k1==$v){
-                print_r($v1);
-
-            }
-        }
-    }}
-
+$s1=0;
+$s2=0;
+for ($i = 1; $i <= 5; $i++) {
+    $Cartjoueur1=(array_rand($cart, 1));
+    $Cartjoueur2= (array_rand($cart, 1));
+    if ($Cartjoueur1> $Cartjoueur2) {
+        $s1++;
+    }
+    elseif ($Cartjoueur1< $Cartjoueur2) {
+        $s2++;
+    }
+    foreach($cart[$Cartjoueur1] as $key=>$value){
+        foreach($cart[$Cartjoueur2] as $key1=>$value1){
+            ?>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <link rel="stylesheet" href="bootstrap.min.css">
+            </head>
+            <body class="container">
+            <table border="0"  class="table-success">
+                <tr>
+                    <td> <?php echo $key ;?></td>
+                    <td><?php echo $key1; ?></td>
+                </tr>
+                <tr>
+                    <td><?php echo $value ;?></td>
+                    <td><?php echo $value1 ;?></td>
+                </tr>
+                <?php echo " <br> <tr><td> first $s1 , second $s2</td> </tr> <br>" ; ?>
+            </table>
+            <br>
+            </html>
+            <?php
+        } }} ?>
+<table border="0" align="center" class="alert-danger">
+    <tr><td> <?php echo ($s1==$s2) ? "paregio" : ($s1>$s2) ? "<p text-align='center'>first win</p>" : "second win" ;   ?>  </td></tr>
+</table>
