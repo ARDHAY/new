@@ -1,7 +1,7 @@
 
 
 <?php
-$temps = 365*24*3600;
+$temps = 365*24*3600;//$temps = 60;
 $cookie_name = "choixcss";
 
 setcookie ($cookie_name, time() + $temps);
