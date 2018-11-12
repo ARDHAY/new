@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>resa</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body class="container text-monospace bg-light">
+<div>
+    <div>
+        <div class="d-flex justify-content-between">
+            <div>
+                <h1> MC MRAWEB </h1>
+                <h4 class="text-danger">techri 10 t5alles 9</h4>
+            </div>
+            <div>
+                <img src="C5H4m7tWEAAxYqF.jpg" alt="lablebi" width="180" height="120">
+            </div>
+            <div>
+                <h1> MC MRAWEB </h1>
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <form action="recap.php" method="post" enctype="multipart/form-data" name="recap" class="bg-info text-white">
+             CIN: <input type="text" name="cin" required class="form-control"><br>
+            Nom: <input type="text" name="nom" required class="form-control"><br>
+            Prenom: <input type="text" name="prenom" required class="form-control"><br>
+            Nombres: <input name="nombre" required type="number" min="1" class="form-control"> <br>
+            adresse: <textarea rows="4" cols="50" name="adresse" required placeholder="adresse..."
+                               class="form-control">
+   </textarea><br>
+            <select name="kaskrout_kifech" id="" class="form-control">
+                <option value="..." disabled="disabled">akhtar kaskrout</option>
+                <br>
+                <option value="ton">ton</option>
+                <br>
+                <option value="kafteji">kafteji</option>
+                <br>
+                <option value="viande">viande</option>
+                <br>
+                <option value="poulet">poulet</option>
+                <br>
+                <option value="escalope">escalope</option>
+                <br>
+            </select><br>
+
+            <div class="form-check">
+
+                <input type="checkbox" name="harissa" value="harissa" class="form-check-input">
+                <label for="hrissa" class="form-check-label">harissa</label><br>
+
+                <input type="checkbox" name="salade" value="salade" class="form-check-input">
+                <label for="salata" class="form-check-label">salade</label><br>
+
+                <input type="checkbox" name="mayo" value="mayo" class="form-check-input">
+                <label for="mayoo" class="form-check-label">mayo</label><br>
+
+                <input type="checkbox" name="ketchup" value="ketchup" class="form-check-input">
+                <label for="ketchupp" class="form-check-label">ketchup</label><br><br><br><br>
+            </div>
+            <input type="submit" value="validez" class="btn btn-primary center-block align-items-end">        </form>
+
+    </div>
+</div>
+
+
+</body>
+</html>
