@@ -35,7 +35,15 @@ $adresse = isset($_POST['adresse']) ? $_POST['adresse'] : NULL;
  echo' 3andek :'.$res1.'blech <br><br>';
  echo ' bech t5alles ken:'.$prix .'dt<br><br>';
 
- echo ' bichfe '
+ echo ' bichfe ';
+  if (move_uploaded_file($_FILES["cin"]["tmp_name"],__DIR__."/uploads/".uniqid().$_FILES["cin"]["name"]))
+    {
+        $message = "CIN téléchargée avec succès";
+        echo "<script type='text/javascript'>alert('$message');</script><br>";}
+    else {
+        $message = "CIN téléchargée avec succès";
+        echo "<script type='text/javascript'>alert('$message');</script><br>";}
+
 
 
 ?>
