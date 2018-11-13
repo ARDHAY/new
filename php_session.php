@@ -15,8 +15,8 @@ if (!isset($_SESSION['views'])) {
 $_SESSION['views'] = $_SESSION['views']+1;
 
 echo "le nombre de visites est égal à : ".$_SESSION['views'];
-echo "<form action='testg.php' method='POST' name='formulaire'> <input value='reset' type='submit' name='button'></form>";
+echo "<form action='php_session.php' method='POST' name='formulaire'> <input value='reset' type='submit' name='button'></form>";
 if (isset($_POST['button']))
 { unset($_SESSION['views']);
-    header("location:testg.php");};
+    header("location:php_session.php");};
 ?>
