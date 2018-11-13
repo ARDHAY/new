@@ -24,7 +24,7 @@
     </div>
     <div>
         <form action="recap.php" method="post" enctype="multipart/form-data" name="recap" class="bg-info text-white">
-             CIN: <input type="text" name="cin" required class="form-control"><br>
+                CIN: <input type="file" name="cin"><br><br>
             Nom: <input type="text" name="nom" required class="form-control"><br>
             Prenom: <input type="text" name="prenom" required class="form-control"><br>
             Nombres: <input name="nombre" required type="number" min="1" class="form-control"> <br>
